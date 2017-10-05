@@ -2,6 +2,10 @@ class UsersController < ApplicationController
   def new
   end
 
+  def index
+    @users = User.all
+  end
+
   def create
   	begin
   		user = User.create!(user_params)

@@ -16,4 +16,5 @@
 //= require rails-ujs
 //= require turbolinks
 //= require articles
-
+//= require underscore-min
+//= require gmaps/google
