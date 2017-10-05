@@ -1,0 +1,20 @@
+<div class="col-md-12"><h1>Danh Sach Albums</h1></div>
+<div class="col-md-12">
+<div class="list-group">
+
+	<% @albums.each do |album| %>
+
+	<a href="<%=album_photos_path(album)%>" onmouseover="this.style.background='#F8F9F2';"  onmouseout="this.style.background='white';" class="list-group-item flex-column align-items-start">
+		<div class="d-flex justify-content-between">
+			<%= image_tag(album.photo_url,  alt: "like", class: "like_image_for_index", :style => "width:10%;" ) %>
+			<span style="font-size: 25px;color: black;">Created By <%=album.user.name%></span>
+			<span style="height: 30px;" class="badge badge-secondary badge-pill"> <%=album.sumviews%></span>
+		</div>
+			
+	</a>
+	<% end %>
+
+</div>
+</div>
+
+	
