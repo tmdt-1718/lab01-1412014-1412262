@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_many :articles
-
+  has_many :photos
+  has_many :comments
+  has_one :album
 	has_secure_password
 
 	def self.authenticate!(session_params)

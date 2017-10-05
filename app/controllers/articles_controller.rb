@@ -3,10 +3,11 @@ class ArticlesController < ApplicationController
 	before_action :get_article, only: [:show, :edit, :update, :destroy]
 	def index
 		@articles = Article.all.newest_order
+		
 	end
 
 	def show
-    
+		
   	end
 
 	def new
@@ -20,6 +21,7 @@ class ArticlesController < ApplicationController
 
 	def create
 	  @article = Article.new(article_params)
+	 
 	  if @article.save
 	    redirect_to @article
 	  else
