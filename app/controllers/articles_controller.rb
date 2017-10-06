@@ -7,7 +7,15 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
-		
+		@article.view += 1
+		@article.comments.each do |comment|
+			class << comment
+		 		 attr_accessor :name
+			end
+			@user = User.find(comment.id)
+			comment.name = @user.name
+		end
+		@article.save
   	end
 
 	def new

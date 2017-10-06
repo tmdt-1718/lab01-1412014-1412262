@@ -21,6 +21,14 @@
         </div>
        
       </div>
+      <div class="row mt-4"> 
+            <div class="col-md-12">
+               <div class="col-md-12">
+                 <ul class="breadcrumb">
+                  </ul> 
+                </div>
+            </div>
+      </div>
       <div class="row">
         <div class="col-md-3">
             <!--Left Menu -->
@@ -33,7 +41,25 @@
         </div>
       </div>
     </div>
-   
+   <script type="text/javascript">
+    
+     crumb = function(){
+      var loc = window.location.toString();
+      var rs = loc.split('http://')[1];
+      var url = rs.split('/');
+      
+      var host = url[0];
+     
+      var bread = [];
+      bread[0] = "";
+      for(var i = 1; i < url.length ; i++){
+        bread[i] = bread[i-1] + '/' + url[i];
+        $(".breadcrumb").append('<li><a href='+ bread[i] + '>' + url[i] + '</a></li>')
+      }
+       
+     }
+     crumb();
+   </script>
 
 
   </body>

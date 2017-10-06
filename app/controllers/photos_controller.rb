@@ -6,5 +6,12 @@ class PhotosController < ApplicationController
 		@photos = Photo.where("album_id = ?", params[:album_id])
 
 	end
+	
+	def show
+		@photo = Photo.find(params[:id])
+		@photo.views += 1
+		@photo.save
+		redirect_to album_photos_path
+	end
 
 end

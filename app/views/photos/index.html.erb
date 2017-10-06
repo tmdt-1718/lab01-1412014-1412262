@@ -4,8 +4,10 @@
 <div class="row">
 <% @photos.each do |photo| %>
   <div class="col-md-4">
-    
-        <%= image_tag(photo.url,  alt: "like", :class=>"img-thumbnail", :style=>"width:250px;height:170px;"  ) %>
+   
+        <%= image_tag(photo.url,  alt: "like", :class=>"img-thumbnail", :title=>album_photo_path(photo.album_id, photo) , :style=>"width:250px;height:170px;"  ) %>
+      
+
         <div class="d-flex justify-content-end">
           <div class="mr-auto">
             Create By: <%= @user.name %>
@@ -19,3 +21,12 @@
 <%end%>
 </div>
 </div>
+<script type='text/javascript'>
+  $(".img-thumbnail").click(function() {
+    var src = $(this).attr('src');
+    var reload = $(this).attr('title');
+   
+    window.open(src, '_blank');
+    window.location.replace(reload);
+  });
+</script>

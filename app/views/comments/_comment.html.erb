@@ -1,15 +1,23 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.user_id %>
-</p>
- 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
 
-<p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+<div class="col-md-12 mb-2">
+	<div class="row">
+		<p>
+		  <b style="font-size: 13px;"><%= comment.name%> : </b>
+		  <%= comment.body %>
+		</p>
+	</div>
+	<div class="row">
+		<div class="col-md-12 text-right">
+			<p style="font-size: 13px'"><i><%= comment.created_at %></i></p>
+			<p style="font-size: 10px;">
+			  <%= link_to 'Destroy Comment', [comment.article, comment],
+			               method: :delete,
+			               data: { confirm: 'Are you sure?' } %>
+			</p>
+		</div>
+		
+	</div>
+	
+</div> 
+
+

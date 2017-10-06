@@ -1,6 +1,5 @@
 <div class="row">
 	<div class="col-md-12">
-		<p>Alert</p>
 		<% if flash[:success] %>
 		<div class="alert alert-warning alert-dismissible fade show" role="alert">
 		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -11,27 +10,40 @@
 		<% end %>
 	</div>
 </div>
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @article.body %>
-</p>
-<p>
-  <strong>User_id:</strong>
-  <%= @article.user_id %>
-</p>
+<div class="col-md-12">
+	<p>
+	  <span style="font-size: 30px;"><b><%= @article.title %></b></span>
+	</p>
 
-<h2>Comments</h2>
+	<p>
+	 	<span style="font-size: 14px">
+	 		<%= @article.created_at %>
+	 	</span>
+	</p>
 
-<%= render @article.comments %>
+	<p>
+	  
+	  <%= @article.body %>
+	</p>
+	<div class="row">
+		<div class="col-md-12 text-right">
+			<p>
+			  <i>Theo:</i>
+			  <%= @article.user.name %>
+			</p>
+		</div>
+	</div>
+	
+	
 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+	<h2>Comments</h2>
+
+	<%= render @article.comments %>
+
+	<h2>Add a comment:</h2>
+	<%= render 'comments/form' %>
 
 
-<%= link_to 'Back', articles_path %>
-<%= link_to 'Edit', edit_article_path(@article) %>
+	<%= link_to 'Back', articles_path %>
+	<%= link_to 'Edit', edit_article_path(@article) %>
+</div>

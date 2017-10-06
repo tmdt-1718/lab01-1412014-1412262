@@ -13,7 +13,7 @@ class AlbumsController < ApplicationController
 			end
 			album.sumviews = views
 		end
-		@count = 3
+		
 
 	end
 end
