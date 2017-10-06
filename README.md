@@ -1,12 +1,12 @@
-# BT-TMDT-1 - *Name of your app*
+# BT-TMDT-1 - *ModelMailer*
 
-**Name of your app** là một bài tập môn TMDT. Ứng dụng cho phép người dùng gửi tin nhắn (email) cho người dùng khác.
+**ModelMailer** là một bài tập môn TMDT. Ứng dụng cho phép người dùng gửi tin nhắn (email) cho người dùng khác.
 
 Thành viên:
-* [ ] **1412014** Phan Tuệ Anh
-* [ ] **1412262** Lê Anh Khôi
+* [x] **1412014** Phan Tuệ Anh
+* [x] **1412262** Lê Anh Khôi
 
-URL: **URL hosting của bài tập**
+URL: **https://sleepy-wave-53044.herokuapp.com/welcome**
 
 ## Yêu cầu
 
@@ -48,7 +48,7 @@ Liệt kê các **yêu cầu nâng cao** đã thực hiện:
 
 ## Demo
 
-Link ảnh GIF demo ứng dụng:
+Link ảnh GIF demo ứng dụng: https://drive.google.com/file/d/0B6Cxm8ro0oCBTXBKMEs5b2hIblk/view?usp=sharing
 
 ![Video Walkthrough](demo.gif)
 
