@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
 			class << comment
 		 		 attr_accessor :name
 			end
-			@user = User.find(comment.id)
+			@user = User.find(comment.user_id)
 			comment.name = @user.name
 		end
 		@article.save
