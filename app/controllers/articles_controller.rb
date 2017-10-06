@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-	before_action :authenticate
+	before_action :authenticate, only: [:new]
 	before_action :get_article, only: [:show, :edit, :update, :destroy]
 	def index
 		@articles = Article.all.newest_order
