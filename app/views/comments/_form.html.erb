@@ -1,14 +1,20 @@
-<%= form_with(model: [ @article, @article.comments.build ]) do |form| %>
-  <p style="display:none;">
-    <%= form.label :user_id %><br>
-    <%= form.text_field :user_id , :value => current_user.id %>
-  </p>
-  <p>
-    Y kien cua ban<br>
-    <%= form.text_area :body %>
-  </p>
-   
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<% if current_user %>
+
+  <%= form_with(model: [ @article, @article.comments.build ]) do |form| %>
+    <p style="display:none;">
+      <%= form.label :user_id %><br>
+      <%= form.text_field :user_id , :value => current_user.id %>
+    </p>
+    <p>
+      Y kien cua ban<br>
+      <%= form.text_area :body %>
+    </p>
+     
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+
+ <% else %>
+ 
+ <%end%>
